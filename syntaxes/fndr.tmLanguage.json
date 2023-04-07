@@ -1,0 +1,87 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "fender",
+	"patterns": [
+		{
+			"include": "#constants"
+		},
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#identifiers"
+		},
+		{
+			"include": "#variables"
+		}
+	],
+	"repository": {
+		"constants": {
+			"patterns": [
+				{
+					"name": "constant.numeric.fndr",
+					"match": "\\b[0-9]+\\b"
+				},
+				{
+					"name": "constant.language.fndr",
+					"match": "\\b(true|false|null)\\b"
+				}
+			]
+		},
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.init.fndr",
+					"match": "\\b(struct|fn)\\b"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.fndr",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.fndr",
+					"match": "\\\\."
+				}
+			]
+		},
+		"comments": {
+			"patterns": [
+				{
+					"begin": "#",
+					"end": "\n",
+					"name": "comment.line.fndr"
+				}
+			]
+		},
+		"variables": {
+			"patterns": [
+				{
+					"name": "variable.declaration.fndr",
+					"match": "\\$([a-zA-Z_][a-zA-Z0-9_]*)"
+				},
+				{
+					"name":"variable.fndr",
+					"match": "\\b([a-zA-Z_][a-zA-Z0-9_]*)"
+				}
+			]
+		},
+		"identifiers":{
+			"patterns": [
+				{
+					"name":"entity.name.function.fndr",
+					"match": "([a-zA-Z_][a-zA-Z0-9_]*)\\s*[\\({]"
+				}
+			]
+		}
+	},
+	"scopeName": "source.fndr"
+}

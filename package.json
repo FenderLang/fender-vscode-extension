@@ -1,0 +1,25 @@
+{
+  "name": "fender-syntax",
+  "displayName": "fender_syntax",
+  "description": "",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.77.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "fndr",
+      "aliases": ["fender", "fndr"],
+      "extensions": [".fndr"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "fndr",
+      "scopeName": "source.fndr",
+      "path": "./syntaxes/fndr.tmLanguage.json"
+    }]
+  }
+}
