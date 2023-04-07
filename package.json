@@ -2,7 +2,9 @@
   "name": "fender-syntax",
   "displayName": "fender_syntax",
   "description": "",
-  "version": "0.0.1",
+  "version": "0.0.2",
+  "publisher": "FuzyTech",
+  "repository": "https://github.com/FenderLang/fender-vscode-extension",
   "engines": {
     "vscode": "^1.77.0"
   },

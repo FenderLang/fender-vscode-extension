@@ -39,6 +39,10 @@
 				{
 					"name": "keyword.init.fndr",
 					"match": "\\b(struct|fn)\\b"
+				},
+				{
+					"name":"keyword.control",
+					"match": "\\breturn\\b"
 				}
 			]
 		},
